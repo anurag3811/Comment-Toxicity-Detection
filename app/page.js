@@ -11,7 +11,7 @@ export default function Home() {
   async function query(data) {
     try {
       const response = await fetch(
-        "https://api-inference.huggingface.co/models/Hate-speech-CNERG/indic-abusive-allInOne-MuRIL",
+        "https://commenttoxicserver.onrender.com/",
         {
           method: "POST",
           headers: {
@@ -27,7 +27,7 @@ export default function Home() {
       if (resul) {
         setResult(
           <div>
-            Toxicity Score: {resul}
+            Toxicity: {resul}
           </div>
         );
       } else {
